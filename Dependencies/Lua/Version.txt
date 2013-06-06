@@ -1,0 +1,3 @@
+http://blog.nuclex-games.com/tutorials/cxx/luabind-introduction/
+5.2.0
+Static Linking

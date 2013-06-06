@@ -1,0 +1,4 @@
+# Ensure libraries do not get deleted
+!*.pdb
+!*.lib
+!*.dll
