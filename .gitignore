@@ -1,0 +1,17 @@
+# Visual Studio solution/project temporary files
+*.suo
+*.sdf
+*.user
+
+# Build/temporary files
+*.dll
+*.lib
+*.exe
+*.tlog
+*.log
+*.lastbuildstate
+*.obj
+*.idb
+*.pdb
+*.ilk
+*.exp
