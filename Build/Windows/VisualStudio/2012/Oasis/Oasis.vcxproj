@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Oasis\Includes\Oasis.h" />
+    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisCommon.h" />
+    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisConfigure.h" />
+    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisRoot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Oasis\Source\OasisRoot.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Oasis</RootNamespace>
+    <ProjectName>Oasis</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
