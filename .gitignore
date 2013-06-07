@@ -1,10 +1,10 @@
-# Visual Studio solution/project temporary files
+# Temporary Visual Studio solution/project files
 *.suo
 *.sdf
 *.user
 *.opensdf
 
-# Build/temporary files
+# Temporary build files
 *.dll
 *.lib
 *.exe
@@ -16,3 +16,4 @@
 *.pdb
 *.ilk
 *.exp
+*.unsuccessfulbuild

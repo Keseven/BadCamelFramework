@@ -20,11 +20,14 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Oasis
 {
-	class OASIS_CLASS A
+	// The main object that provides everything else
+	class OASIS_CLASS Engine
 	{
 	public:
-		A();
-		void B(void);
+		Engine(void);
+		
+		// Setup the engine
+		bool Setup(void);
 	};
 };
 

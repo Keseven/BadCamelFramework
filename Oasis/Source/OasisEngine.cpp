@@ -16,20 +16,19 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <OasisCommon.h>
-#include <OasisRoot.h>
+#include <OasisEngine.h>
 
 #include <SFML/System.hpp>
 
 namespace Oasis
 {
-	A::A()
+	Engine::Engine(void)
 	{
 
 	}
 
-	void A::B(void)
+	bool Engine::Setup(void)
 	{
-		int a = 1;
-		a += 2;		
+		return true;	
 	}
 };

@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Tutorial\Source\Main.cpp" />
+    <ClCompile Include="..\..\..\..\..\Demonstration\Source\Main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{40665485-D855-4AA8-ABBD-57C72B0BB452}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Tutorial</RootNamespace>
-    <ProjectName>Tutorial</ProjectName>
+    <RootNamespace>Demonstration</RootNamespace>
+    <ProjectName>Demonstration</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,26 +72,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\..\Tutorial\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Demonstration\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
     <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\..\Tutorial\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Demonstration\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
     <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\..\Tutorial\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Demonstration\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
     <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\..\Tutorial\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Demonstration\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
     <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -110,9 +110,9 @@
       <AdditionalDependencies>Oasis.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\
+      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\
 
-copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
+copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -131,9 +131,9 @@ copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\.
       <AdditionalDependencies>Oasis.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\
+      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\
 
-copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
+copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -156,9 +156,9 @@ copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\.
       <AdditionalDependencies>Oasis.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\
+      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\
 
-copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
+copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -181,9 +181,9 @@ copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\.
       <AdditionalDependencies>Oasis.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\
+      <Command>copy ..\..\..\..\..\Dependencies\SFML\Binaries\Windows\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\
 
-copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Tutorial\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
+copy ..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\*.dll ..\..\..\..\..\Demonstration\Binaries\$(Configuration)\$(PlatformTarget)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

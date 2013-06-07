@@ -22,10 +22,10 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\Oasis.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisEngine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisEngine.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}</ProjectGuid>
