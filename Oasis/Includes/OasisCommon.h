@@ -44,7 +44,7 @@ namespace Oasis
     #endif
 
 	// Forward declare all classes to simplify dependencies
-	class A;
+	class Engine;
 };
 
 

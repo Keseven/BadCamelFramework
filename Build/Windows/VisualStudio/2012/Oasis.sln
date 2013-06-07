@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Oasis", "Oasis\Oasis.vcxproj", "{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demonstration", "Demonstration\Demonstration.vcxproj", "{40665485-D855-4AA8-ABBD-57C72B0BB452}"
 	ProjectSection(ProjectDependencies) = postProject
 		{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8} = {82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Oasis", "Oasis\Oasis.vcxproj", "{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
