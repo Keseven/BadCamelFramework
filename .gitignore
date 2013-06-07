@@ -2,6 +2,7 @@
 *.suo
 *.sdf
 *.user
+*.opensdf
 
 # Build/temporary files
 *.dll

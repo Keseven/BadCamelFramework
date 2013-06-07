@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Oasis\Includes\Oasis.h" />
-    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisCommon.h" />
-    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisConfigure.h" />
-    <ClInclude Include="..\..\..\..\Oasis\Includes\OasisRoot.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\Oasis.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Oasis\Source\OasisRoot.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}</ProjectGuid>
@@ -77,20 +77,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>..\..\..\..\..\Oasis\Binaries\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>..\..\..\..\..\Oasis\Temporary\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -99,14 +99,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\..\Oasis\Includes\;..\..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio\2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent />
     <CustomBuildStep />
@@ -120,14 +120,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\..\Oasis\Includes\;..\..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio\2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent />
     <CustomBuildStep />
@@ -143,16 +143,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\..\Oasis\Includes\;..\..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio\2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent />
     <CustomBuildStep />
@@ -168,16 +168,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>OASIS_BUILD_NON_CLIENT;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\..\Oasis\Includes\;..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\..\Oasis\Includes\;..\..\..\..\..\Dependencies\SFML\Includes\;..\..\..\..\..\Dependencies\Lua\Includes\;..\..\..\..\..\Dependencies\Luabind\Includes\;..\..\..\..\..\Dependencies\Boost\Includes\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Lua\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;..\..\..\..\Dependencies\Luabind\Libraries\Windows\VisualStudio2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml.lib;lua.lib;luabind.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Dependencies\SFML\Libraries\Windows\VisualStudio\2012\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>..\..\..\..\..\Oasis\Libraries\$(Configuration)\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent />
     <CustomBuildStep />
