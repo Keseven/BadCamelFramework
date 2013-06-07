@@ -25,9 +25,18 @@ namespace Oasis
 	{
 	public:
 		Engine(void);
+		Engine(std::string &workingDirectory);
 		
 		// Setup the engine
-		bool Setup(void);
+		void SetWorkingDirectory(std::string &workingDirectory);
+
+		// Start the engine
+		void Start(void);
+		// Stop the engine
+		void Stop(void);
+
+	protected:
+		std::basic_string<char> m_workingDirectory;
 	};
 };
 

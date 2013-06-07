@@ -20,17 +20,19 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <OasisConfigure.h>
 
+#include <string>
+
 namespace Oasis
 {
-	// 8 bit integer (char)
+	// 8 bit integer
 	typedef signed char					Int8;
     typedef unsigned char				UInt8;
 
-	// 16 bit integer (short)
+	// 16 bit integer
     typedef signed short				Int16;
     typedef unsigned short				UInt16;
 
-	// 32 bit integer (int)
+	// 32 bit integer
     typedef signed int					Int32;
     typedef unsigned int				UInt32;
 

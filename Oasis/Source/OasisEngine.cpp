@@ -18,17 +18,54 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <OasisCommon.h>
 #include <OasisEngine.h>
 
-#include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace Oasis
 {
 	Engine::Engine(void)
 	{
-
+		
 	}
 
-	bool Engine::Setup(void)
+	Engine::Engine(std::string &workingDirectory)
 	{
-		return true;	
+		SetWorkingDirectory(workingDirectory);
+	}
+
+	void Engine::SetWorkingDirectory(std::string &workingDirectory)
+	{
+		m_workingDirectory = workingDirectory;
+	}
+
+	void Engine::Start(void)
+	{
+		sf::RenderWindow window(sf::VideoMode(400, 400), "Demonstration");		
+		
+		sf::Texture texture;
+		if (!texture.loadFromFile(m_workingDirectory + "HellowWorld.png"))
+			return;
+
+		sf::Sprite sprite;
+		sprite.setTexture(texture);		
+
+		sf::Event event;
+		
+		while (window.isOpen())
+		{
+			while (window.pollEvent(event))
+			{
+				if (event.type == sf::Event::Closed)
+					window.close();
+			}
+
+			window.clear();
+			window.draw(sprite);
+			window.display();
+		}
+	}
+
+	void Engine::Stop(void)
+	{
+	
 	}
 };
