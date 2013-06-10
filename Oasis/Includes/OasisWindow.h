@@ -18,21 +18,28 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef __OASISWINDOW_H__
 #define __OASISWINDOW_H__
 
+#include <OasisCommon.h>
+
 namespace Oasis
 {
 	class OASIS_CLASS Window
 	{
 	public:
-		Window(uint16 width, uint16 height, const string &title);
-		Window(const Vector2u &dimensions, const string &title);
+		Window(UInt16 width, UInt16 height, const String &title);
+		Window(const Vector2u &dimensions, const String &title);
+		
+		virtual ~Window(void) {}
 
-		void setSize(uint16 width, uint16 height) const;
+		void setSize(UInt16 width, UInt16 height) const;
 		void setSize(const Vector2u &dimensions) const;
+
+		void setTitle(const String &title) const;
 
 	protected:
 		sf::RenderWindow *m_sfmlWindow;
 
-		void createSFMLWindow(const Vector2u &dimensions, const string &title);
+		void initialise(const Vector2u &dimensions, const String &title);
+		void createSFMLWindow(const Vector2u &dimensions, const String &title);
 	};
 };
 

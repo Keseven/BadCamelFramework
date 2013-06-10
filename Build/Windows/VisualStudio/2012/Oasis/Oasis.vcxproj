@@ -24,11 +24,13 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisString.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisString.cpp" />
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisWindow.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

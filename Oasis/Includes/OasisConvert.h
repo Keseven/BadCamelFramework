@@ -18,6 +18,8 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef __OASISCONVERT_H__
 #define __OASISCONVERT_H__
 
+#include <OasisCommon.h>
+
 #include <SFML/System.hpp>
 
 namespace Oasis

@@ -4,8 +4,8 @@
 
  int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
-	Oasis::Engine engine;
-	engine.Start();
+	Oasis::Root root(Oasis::Vector2u(400, 400));
+	Oasis::Vector2u v;
 
 	return 0;
 };

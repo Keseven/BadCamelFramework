@@ -15,22 +15,19 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <OasisCommon.h>
 #include <OasisRoot.h>
 #include <OasisWindow.h>
 
-#include <SFML/System.hpp>
-
 namespace Oasis
 {
-	Root::Root(uint16 width, uint16 height)
+	Root::Root(UInt16 width, UInt16 height)
 	{
-		createWindow(Vector2u(width, height));
+		initialise(Vector2u(width, height));
 	}
 
 	Root::Root(const Vector2u &dimensions)
 	{
-		createWindow(dimensions);
+		initialise(dimensions);
 	}
 
 	const Window *Root::getWindow(void) const
@@ -38,8 +35,13 @@ namespace Oasis
 		return m_window;
 	}
 
-	void Root::createWindow(const Vector2u &dimensions) const
+	void Root::initialise(const Vector2u &dimensions)
 	{
+		createWindow(dimensions);
+	}
 
+	void Root::createWindow(const Vector2u &dimensions)
+	{
+		m_window = new Window(dimensions, "");
 	}
 };

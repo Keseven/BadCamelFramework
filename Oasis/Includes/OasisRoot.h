@@ -18,22 +18,25 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef __OASISROOT_H__
 #define __OASISROOT_H__
 
-#include <OasisWindow.h>
+#include <OasisCommon.h>
 
 namespace Oasis
 {
 	class OASIS_CLASS Root
 	{
 	public:
-		Root(uint16 width, uint16 height);
+		Root(UInt16 width, UInt16 height);
 		Root(const Vector2u &dimensions);
+
+		virtual ~Root(void) {}
 
 		const Window *getWindow(void) const;
 
 	protected:
 		Window *m_window;
 
-		void createWindow(const Vector2u &dimensions) const;
+		void initialise(const Vector2u &dimensions);
+		void createWindow(const Vector2u &dimensions);
 	};
 };
 

@@ -15,7 +15,6 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <OasisCommon.h>
 #include <OasisConvert.h>
 #include <OasisWindow.h>
 
@@ -23,17 +22,17 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Oasis
 {
-	Window::Window(uint16 width, uint16 height, const string &title)
+	Window::Window(UInt16 width, UInt16 height, const String &title)
 	{
-		createSFMLWindow(Vector2u(width, height), title);
+		initialise(Vector2u(width, height), title);
 	}
 
-	Window::Window(const Vector2u &dimensions, const string &title)
+	Window::Window(const Vector2u &dimensions, const String &title)
 	{
-		createSFMLWindow(dimensions, title);
+		initialise(dimensions, title);
 	}
 
-	void Window::setSize(uint16 width, uint16 height) const
+	void Window::setSize(UInt16 width, UInt16 height) const
 	{
 		setSize(Vector2u(width, height));
 	}
@@ -43,7 +42,17 @@ namespace Oasis
 		m_sfmlWindow->setSize(Convert::toSFMLVector2(dimensions));
 	}
 
-	void Window::createSFMLWindow(const Vector2u &dimensions, const string &title)
+	void Window::setTitle(const String &title) const
+	{
+		m_sfmlWindow->setTitle(title);
+	}
+
+	void Window::initialise(const Vector2u &dimensions, const String &title)
+	{
+		createSFMLWindow(dimensions, title);
+	}
+
+	void Window::createSFMLWindow(const Vector2u &dimensions, const String &title)
 	{
 		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title); 
 	}
