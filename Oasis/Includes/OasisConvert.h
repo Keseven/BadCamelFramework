@@ -15,12 +15,22 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASIS_H__
-#define __OASIS_H__
+#ifndef __OASISCONVERT_H__
+#define __OASISCONVERT_H__
 
-// Includes all include files for use in client applications
-#include <OasisCommon.h>
+#include <SFML/System.hpp>
 
-#include <OasisRoot.h>
+namespace Oasis
+{
+	class Convert
+	{
+	public: 
+		template <typename T>
+		static inline sf::Vector2<T> toSFMLVector2(const Vector2<T> &vector2)
+		{
+			return sf::Vector2<T>(vector2.x, vector2.y);
+		}    
+	};
+};
 
-#endif __OASIS_H__ */
+#endif // __OASISCONVERT_H__

@@ -20,34 +20,49 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <OasisConfigure.h>
 
+// Custom types
+#include <OasisVector2.h>
+
+// Standard containers
 #include <string>
+#include <vector>
 
 namespace Oasis
 {
 	// 8 bit integer
-	typedef signed char					Int8;
-    typedef unsigned char				UInt8;
+	typedef signed char					int8;
+    typedef unsigned char				uint8;
 
 	// 16 bit integer
-    typedef signed short				Int16;
-    typedef unsigned short				UInt16;
+    typedef signed short				int16;
+    typedef unsigned short				uint16;
 
 	// 32 bit integer
-    typedef signed int					Int32;
-    typedef unsigned int				UInt32;
+    typedef signed int					int32;
+    typedef unsigned int				uint32;
 
 	// 64 bit integer
     #if OASIS_COMPILER == OASIS_COMPILER_MSVC
-        typedef signed   __int64		Int64;
-        typedef unsigned __int64		UInt64;
+        typedef signed   __int64		int64;
+        typedef unsigned __int64		uint64;
     #else
-        typedef signed long long		Int64;
-        typedef unsigned long long		UInt64;
+        typedef signed long long		int64;
+        typedef unsigned long long		uint64;
     #endif
 
-	// Forward declare all classes to simplify dependencies
-	class Engine;
+	// String typedefs
+	typedef std::string string;
+	
+	// Define the most common Vector2 types
+	typedef Vector2<int>				Vector2i;
+	typedef Vector2<unsigned int>		Vector2u;
+	typedef Vector2<float>				Vector2f;
 };
 
+// Forward declare SFML objects
+namespace sf
+{
+	class RenderWindow;
+}
 
-#endif /* __OASISCOMMON_H__ */
+#endif // __OASISCOMMON_H__

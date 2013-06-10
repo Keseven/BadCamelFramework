@@ -15,12 +15,22 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASIS_H__
-#define __OASIS_H__
+#ifndef __OASISVECTOR2_H__
+#define __OASISVECTOR2_H__
 
-// Includes all include files for use in client applications
-#include <OasisCommon.h>
+namespace Oasis
+{
+	template <typename T>
+	class Vector2
+	{
+	public :		
+		T x;
+		T y;
 
-#include <OasisRoot.h>
+		inline Vector2() : x(0), y(0) {}    
+		inline Vector2(T X, T Y) : x(X), y(Y) {}
+	};
+};
 
-#endif __OASIS_H__ */
+
+#endif // __OASISVECTOR2_H__

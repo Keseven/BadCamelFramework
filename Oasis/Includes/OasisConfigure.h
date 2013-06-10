@@ -71,6 +71,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 // ---------------------------
 // Defines OASIS_CLASS and OASIS_CLASS_PRIVATE
 
+// Static builds do not need import/exports
 #if defined(OASIS_BUILD_STATIC)
 #	define OASIS_CLASS
 #	define OASIS_CLASS_PRIVATE
@@ -95,7 +96,18 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #   define OASIS_DEBUG_MODE 0
 #endif
 
-// 5. Ensure all defines have been set
+// 5. Compiler configuration
+// -------------------------
+// Performs compiler specific configuration
+
+#if OASIS_COMPILER == OASIS_COMPILER_MSVC
+	// Disable: "<type> needs to have dll-interface to be used by clients'	
+#	pragma warning(disable: 4251)
+	// Disable: "non dll-interface class used as base for dll-interface class"
+#	pragma warning(disable: 4275)
+#endif
+
+// 6. Ensure all defines have been set
 // -----------------------------------
 // This is to test that any changes above have not resulted in an unset define
 
@@ -121,4 +133,4 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 	OASIS_PRECOMPILER_ERROR("OASIS_DEBUG_MODE has not been defined.")
 #endif
 
-#endif /* __OASISPLATFORM_H__ */
+#endif // __OASISPLATFORM_H__

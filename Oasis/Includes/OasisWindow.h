@@ -15,12 +15,25 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASIS_H__
-#define __OASIS_H__
+#ifndef __OASISWINDOW_H__
+#define __OASISWINDOW_H__
 
-// Includes all include files for use in client applications
-#include <OasisCommon.h>
+namespace Oasis
+{
+	class OASIS_CLASS Window
+	{
+	public:
+		Window(uint16 width, uint16 height, const string &title);
+		Window(const Vector2u &dimensions, const string &title);
 
-#include <OasisRoot.h>
+		void setSize(uint16 width, uint16 height) const;
+		void setSize(const Vector2u &dimensions) const;
 
-#endif __OASIS_H__ */
+	protected:
+		sf::RenderWindow *m_sfmlWindow;
+
+		void createSFMLWindow(const Vector2u &dimensions, const string &title);
+	};
+};
+
+#endif // __OASISWINDOW_H__

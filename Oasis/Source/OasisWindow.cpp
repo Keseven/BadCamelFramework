@@ -16,56 +16,35 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <OasisCommon.h>
-#include <OasisEngine.h>
+#include <OasisConvert.h>
+#include <OasisWindow.h>
 
 #include <SFML/Graphics.hpp>
 
 namespace Oasis
 {
-	Engine::Engine(void)
+	Window::Window(uint16 width, uint16 height, const string &title)
 	{
-		
+		createSFMLWindow(Vector2u(width, height), title);
 	}
 
-	Engine::Engine(std::string &workingDirectory)
+	Window::Window(const Vector2u &dimensions, const string &title)
 	{
-		SetWorkingDirectory(workingDirectory);
+		createSFMLWindow(dimensions, title);
 	}
 
-	void Engine::SetWorkingDirectory(std::string &workingDirectory)
+	void Window::setSize(uint16 width, uint16 height) const
 	{
-		m_workingDirectory = workingDirectory;
+		setSize(Vector2u(width, height));
 	}
 
-	void Engine::Start(void)
+	void Window::setSize(const Vector2u &dimensions) const
 	{
-		sf::RenderWindow window(sf::VideoMode(400, 400), "Demonstration");		
-		
-		sf::Texture texture;
-		if (!texture.loadFromFile(m_workingDirectory + "HellowWorld.png"))
-			return;
-
-		sf::Sprite sprite;
-		sprite.setTexture(texture);		
-
-		sf::Event event;
-		
-		while (window.isOpen())
-		{
-			while (window.pollEvent(event))
-			{
-				if (event.type == sf::Event::Closed)
-					window.close();
-			}
-
-			window.clear();
-			window.draw(sprite);
-			window.display();
-		}
+		m_sfmlWindow->setSize(Convert::toSFMLVector2(dimensions));
 	}
 
-	void Engine::Stop(void)
+	void Window::createSFMLWindow(const Vector2u &dimensions, const string &title)
 	{
-	
+		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title); 
 	}
 };

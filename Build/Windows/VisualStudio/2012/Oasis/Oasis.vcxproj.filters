@@ -15,21 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h">
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisEngine.h">
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\Oasis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h">
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisEngine.cpp">
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

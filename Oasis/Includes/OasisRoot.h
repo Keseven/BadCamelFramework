@@ -15,12 +15,26 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASIS_H__
-#define __OASIS_H__
+#ifndef __OASISROOT_H__
+#define __OASISROOT_H__
 
-// Includes all include files for use in client applications
-#include <OasisCommon.h>
+#include <OasisWindow.h>
 
-#include <OasisRoot.h>
+namespace Oasis
+{
+	class OASIS_CLASS Root
+	{
+	public:
+		Root(uint16 width, uint16 height);
+		Root(const Vector2u &dimensions);
 
-#endif __OASIS_H__ */
+		const Window *getWindow(void) const;
+
+	protected:
+		Window *m_window;
+
+		void createWindow(const Vector2u &dimensions) const;
+	};
+};
+
+#endif // __OASISROOT_H__

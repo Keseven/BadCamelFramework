@@ -15,29 +15,31 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
+#include <OasisCommon.h>
+#include <OasisRoot.h>
+#include <OasisWindow.h>
+
+#include <SFML/System.hpp>
 
 namespace Oasis
 {
-	// The main object that provides everything else
-	class OASIS_CLASS Engine
+	Root::Root(uint16 width, uint16 height)
 	{
-	public:
-		Engine(void);
-		Engine(std::string &workingDirectory);
-		
-		// Setup the engine
-		void SetWorkingDirectory(std::string &workingDirectory);
+		createWindow(Vector2u(width, height));
+	}
 
-		// Start the engine
-		void Start(void);
-		// Stop the engine
-		void Stop(void);
+	Root::Root(const Vector2u &dimensions)
+	{
+		createWindow(dimensions);
+	}
 
-	protected:
-		std::basic_string<char> m_workingDirectory;
-	};
+	const Window *Root::getWindow(void) const
+	{
+		return m_window;
+	}
+
+	void Root::createWindow(const Vector2u &dimensions) const
+	{
+
+	}
 };
-
-#endif /* __OASISROOT_H__ */
