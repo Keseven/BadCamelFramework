@@ -19,6 +19,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISCONVERT_H__
 
 #include <OasisCommon.h>
+#include <OasisRectangle.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -36,7 +37,7 @@ namespace Oasis
 		template <typename T>
 		static inline sf::Rect<T> toSfmlRectangle(const Rectangle<T> &rectangle)
 		{
-			return sf::Rect<T>(recetangle.left, rectangle.top, rectangle.width, rectangle.height);
+			return sf::Rect<T>(rectangle.left, rectangle.top, rectangle.width, rectangle.height);
 		}
 	};
 };

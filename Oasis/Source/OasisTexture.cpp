@@ -27,6 +27,11 @@ namespace Oasis
 		m_sfmlTexture = new sf::Texture;
 	}
 
+	Texture::~Texture(void)
+	{
+		delete m_sfmlTexture;
+	}
+
 	bool Texture::loadFromFile(const String &fileName)
 	{
 		if (!m_sfmlTexture->loadFromFile(fileName))
@@ -35,8 +40,8 @@ namespace Oasis
 		return true;
 	}
 
-	const sf::Texture *Texture::getSfmlTexture(void) const
+	const sf::Texture &Texture::getSfmlTexture(void) const
 	{
-		return m_sfmlTexture;
+		return *m_sfmlTexture;
 	}
 };

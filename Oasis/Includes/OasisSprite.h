@@ -26,32 +26,15 @@ namespace Oasis
 	class OASIS_CLASS Sprite
 	{
 	public:		
-		enum MovementDirection
-		{		
-			MD_NONE,
-			MD_UP,
-			MD_UP_RIGHT,
-			MD_RIGHT,
-			MD_DOWN_RIGHT,
-			MD_DOWN,
-			MD_DOWN_LEFT,
-			MD_LEFT,
-			MD_UP_LEFT,
-
-			MD_
-		};
-
 		Sprite(void);
 
-		virtual ~Sprite(void) {}
+		virtual ~Sprite(void);
 
-		void setTexture(Texture *texture, const IntRectangle &rectangle) const;
-		//void setMovementAnimation(MovementDirection direction, MovementAnimation *animation) const;
-
+		void setTexture(const Texture &texture) const;
+		void setTexture(const Texture &texture, const IntRectangle &rectangle) const;
+		
 	protected:
-		sf::Sprite *m_sfmlSprite;
-		MovementDirection currentMovementDirection;
-		std::vector<Animation*> m_movementAnimations;
+		sf::Sprite *m_sfmlSprite;		
 	};
 };
 

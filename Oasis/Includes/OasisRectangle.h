@@ -31,12 +31,9 @@ namespace Oasis
 		T top;
 		T width;
 		T height;
-
-		static const Rectangle ZERO;
-		static const Rectangle UNIT_SCALE;
-				
+						
 		inline Rectangle(void) : left(0), top(0), width(0), height(0) {}
-		inline Rectangle(T rectangleLeft, T rectangleTop, T rectangleWidth, T rectangleHeight) : left(rectangleLeft), top(rectangleTop), width(rectanlgeWidth), height(rectangleHeight) {}
+		inline Rectangle(T rectangleLeft, T rectangleTop, T rectangleWidth, T rectangleHeight) : left(rectangleLeft), top(rectangleTop), width(rectangleWidth), height(rectangleHeight) {}
 		inline Rectangle(const Vector2<T> &position, const Vector2<T> &size) : left(position.x), top(position.y), width(size.x), height(size.y) {}
 		
 		template <typename U>

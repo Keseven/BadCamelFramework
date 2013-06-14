@@ -29,11 +29,6 @@ namespace Oasis
 		T x;
 		T y;
 		
-		static const Vector2 ZERO;
-		static const Vector2 UNIT_X;
-		static const Vector2 UNIT_Y;
-		static const Vector2 UNIT_SCALE;
-
 		inline Vector2() : x(0), y(0) {}    
 		inline Vector2(T X, T Y) : x(X), y(Y) {}
 

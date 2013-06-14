@@ -29,14 +29,14 @@ namespace Oasis
 	public:
 		Texture(void);
 		
-		virtual ~Texture(void) {}
+		virtual ~Texture(void);
 
 		bool loadFromFile(const String &fileName);
 
 	protected:
 		sf::Texture *m_sfmlTexture;
 
-		const sf::Texture *getSfmlTexture(void) const;
+		const sf::Texture &getSfmlTexture(void) const;
 	};
 };
 

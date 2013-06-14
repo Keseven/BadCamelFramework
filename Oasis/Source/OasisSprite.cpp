@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <OasisConvert.h>
 #include <OasisSprite.h>
 #include <OasisTexture.h>
 
@@ -22,13 +23,24 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Oasis
 {		
-	Sprite::Sprite(void) : currentMovementDirection(MD_NONE)
+	Sprite::Sprite(void)
 	{
-		m_sfmlSprite = new sf::Sprite();
+		m_sfmlSprite = new sf::Sprite;
 	}
 
-	void Sprite::setTexture(Texture *texture, const IntRectangle &rectangle) const
+	Sprite::~Sprite(void)
 	{
-		m_sfmlSprite->setTexture(*texture->getSfmlTexture());
+		delete m_sfmlSprite;
+	}
+
+	void Sprite::setTexture(const Texture &texture) const
+	{		
+		m_sfmlSprite->setTexture(texture.getSfmlTexture());
+	}
+
+	void Sprite::setTexture(const Texture &texture, const IntRectangle &rectangle) const
+	{
+		setTexture(texture);
+		m_sfmlSprite->setTextureRect(Convert::toSfmlRectangle(rectangle));
 	}
 };

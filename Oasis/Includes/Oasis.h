@@ -22,6 +22,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <OasisCommon.h>
 
 #include <OasisRoot.h>
+#include <OasisSprite.h>
 #include <OasisTexture.h>
 
 #endif __OASIS_H__ */
