@@ -15,26 +15,13 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
-
-#include <OasisCommon.h>
 #include <OasisVector2.h>
 
 namespace Oasis
-{
-	class OASIS_CLASS Root
-	{
-	public:		
-		Root(const IntVector2 &dimensions, const String &title);
+{		
+	template <typename T>
+	const Vector2<T> Vector2<T>::ZERO(0, 0);
 
-		virtual ~Root(void) {}
-
-		void Run(void) const;
-
-	protected:
-		sf::RenderWindow *m_sfmlWindow;
-	};
+	template <typename T>
+	const Vector2<T> Vector2<T>::UNIT_SCALE(1, 1);
 };
-
-#endif // __OASISROOT_H__

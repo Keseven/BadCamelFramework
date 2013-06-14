@@ -15,8 +15,8 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISPLATFORM_H__
-#define __OASISPLATFORM_H__
+#ifndef __OASISCONFIGURE_H__
+#define __OASISCONFIGURE_H__
 
 // Standard preprocessor error/warning output
 #define OASIS_PRECOMPILER_ASSERT(constant, message)		static_assert(constant, "OASIS COMPILATION ERROR: " message);
@@ -133,4 +133,4 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 	OASIS_PRECOMPILER_ERROR("OASIS_DEBUG_MODE has not been defined.")
 #endif
 
-#endif // __OASISPLATFORM_H__
+#endif // __OASISCONFIGURE_H__

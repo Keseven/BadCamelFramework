@@ -19,6 +19,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISRECTANGLE_H__
 
 #include <OasisCommon.h>
+#include <OasisVector2.h>
 
 namespace Oasis
 {
@@ -30,13 +31,14 @@ namespace Oasis
 		T top;
 		T width;
 		T height;
+
+		static const Rectangle ZERO;
+		static const Rectangle UNIT_SCALE;
 				
 		inline Rectangle(void) : left(0), top(0), width(0), height(0) {}
 		inline Rectangle(T rectangleLeft, T rectangleTop, T rectangleWidth, T rectangleHeight) : left(rectangleLeft), top(rectangleTop), width(rectanlgeWidth), height(rectangleHeight) {}
 		inline Rectangle(const Vector2<T> &position, const Vector2<T> &size) : left(position.x), top(position.y), width(size.x), height(size.y) {}
-
-		static const Rectangle ZERO = Rectangle();
-
+		
 		template <typename U>
 		inline explicit Rectangle(const Rectangle<U> &rectangle) : left(static_cast<T>(rectangle.left)), top(static_cast<T>(rectangle.top)), width(static_cast<T>(rectangle.width)), height(static_cast<T>(rectangle.height)) {}
 

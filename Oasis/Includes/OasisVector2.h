@@ -28,6 +28,11 @@ namespace Oasis
 	public:		
 		T x;
 		T y;
+		
+		static const Vector2 ZERO;
+		static const Vector2 UNIT_X;
+		static const Vector2 UNIT_Y;
+		static const Vector2 UNIT_SCALE;
 
 		inline Vector2() : x(0), y(0) {}    
 		inline Vector2(T X, T Y) : x(X), y(Y) {}
@@ -35,7 +40,7 @@ namespace Oasis
 		template <typename U>
 		inline explicit Vector2(const Vector2<U>& vector) : x(static_cast<T>(vector.x)), y(static_cast<T>(vector.y)) {}
 
-		virtual inline ~Vector2(void) {}
+		virtual inline ~Vector2(void) {}	
 	};
 	
 	typedef Vector2<int>				IntVector2;

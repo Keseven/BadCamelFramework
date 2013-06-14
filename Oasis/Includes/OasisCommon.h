@@ -47,21 +47,16 @@ namespace Oasis
     #endif
 
 	typedef std::string String;
-
+	
 	class Animation;
-	class Texture;
+	class Texture;	
 };
 
 namespace sf
 {
-	class Clock;
 	class RenderWindow;
 	class Sprite;
 	class Texture;
 }
-
-#include <OasisException.h>
-#include <OasisVector2.h>
-#include <OasisRectangle.h>
 
 #endif // __OASISCOMMON_H__

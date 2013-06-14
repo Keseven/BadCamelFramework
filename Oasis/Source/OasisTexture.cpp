@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <OasisException.h>
 #include <OasisTexture.h>
 
 #include <SFML/Graphics.hpp>

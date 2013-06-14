@@ -20,7 +20,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <OasisCommon.h>
 
-#include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace Oasis
 {
@@ -28,10 +28,16 @@ namespace Oasis
 	{
 	public: 
 		template <typename T>
-		static inline sf::Vector2<T> toSFMLVector2(const Vector2<T> &vector2)
+		static inline sf::Vector2<T> toSfmlVector2(const Vector2<T> &vector2)
 		{
 			return sf::Vector2<T>(vector2.x, vector2.y);
-		}    
+		} 
+
+		template <typename T>
+		static inline sf::Rect<T> toSfmlRectangle(const Rectangle<T> &rectangle)
+		{
+			return sf::Rect<T>(recetangle.left, rectangle.top, rectangle.width, rectangle.height);
+		}
 	};
 };
 
