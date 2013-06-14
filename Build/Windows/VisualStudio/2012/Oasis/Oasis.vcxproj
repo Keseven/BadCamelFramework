@@ -20,18 +20,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\Oasis.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisAnimation.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisException.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisString.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSprite.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisTexture.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h" />
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisException.cpp" />
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp" />
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisString.cpp" />
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisWindow.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisSprite.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisTexture.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}</ProjectGuid>

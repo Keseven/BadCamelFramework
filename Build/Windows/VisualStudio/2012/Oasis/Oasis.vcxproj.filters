@@ -27,16 +27,25 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisString.h">
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +53,13 @@
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisWindow.cpp">
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisString.cpp">
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

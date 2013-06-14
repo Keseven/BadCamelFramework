@@ -21,6 +21,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <OasisConfigure.h>
 
 #include <string>
+#include <vector>
 
 namespace Oasis
 {
@@ -45,16 +46,22 @@ namespace Oasis
         typedef unsigned long long		UInt64;
     #endif
 
-	class Window;
+	typedef std::string String;
+
+	class Animation;
+	class Texture;
 };
 
 namespace sf
 {
+	class Clock;
 	class RenderWindow;
-	class String;	
+	class Sprite;
+	class Texture;
 }
 
-#include <OasisString.h>
+#include <OasisException.h>
 #include <OasisVector2.h>
+#include <OasisRectangle.h>
 
 #endif // __OASISCOMMON_H__

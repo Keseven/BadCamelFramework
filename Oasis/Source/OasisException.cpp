@@ -15,25 +15,32 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
-
-#include <OasisCommon.h>
+#include <OasisException.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS Root
+	Exception::ExceptionType Exception::getType(void) const
 	{
-	public:		
-		Root(const IntVector2 &dimensions, const String &title);
+		return m_type;
+	}
 
-		virtual ~Root(void) {}
+	const String &Exception::getSource(void) const
+	{
+		return m_source;
+	}
 
-		void Run(void) const;
+	const String &Exception::getDescription(void) const
+	{
+		return m_descrpition;
+	}
 
-	protected:
-		sf::RenderWindow *m_sfmlWindow;
-	};
+	const String &Exception::getFileName(void) const
+	{
+		return m_fileName;
+	}
+
+	UInt32 Exception::getLineNumber(void) const
+	{
+		return m_lineNumber;
+	}
 };
-
-#endif // __OASISROOT_H__

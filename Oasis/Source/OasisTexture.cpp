@@ -15,25 +15,27 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
+#include <OasisTexture.h>
 
-#include <OasisCommon.h>
+#include <SFML/Graphics.hpp>
 
 namespace Oasis
 {
-	class OASIS_CLASS Root
+	Texture::Texture(void)
 	{
-	public:		
-		Root(const IntVector2 &dimensions, const String &title);
+		m_sfmlTexture = new sf::Texture;
+	}
 
-		virtual ~Root(void) {}
+	bool Texture::loadFromFile(const String &fileName)
+	{
+		if (!m_sfmlTexture->loadFromFile(fileName))
+			OASIS_EXCEPTION(Exception::ET_COULD_NOT_OPEN_FILE, "Texture::loadFromFile", "Unable to locate or load file " + fileName);
 
-		void Run(void) const;
+		return true;
+	}
 
-	protected:
-		sf::RenderWindow *m_sfmlWindow;
-	};
+	const sf::Texture *Texture::getSfmlTexture(void) const
+	{
+		return m_sfmlTexture;
+	}
 };
-
-#endif // __OASISROOT_H__

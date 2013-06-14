@@ -15,25 +15,29 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
+#ifndef __OASISTEXTURE_H__
+#define __OASISTEXTURE_H__
 
 #include <OasisCommon.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS Root
+	class OASIS_CLASS Texture
 	{
-	public:		
-		Root(const IntVector2 &dimensions, const String &title);
+		friend class Sprite;
 
-		virtual ~Root(void) {}
+	public:
+		Texture(void);
+		
+		virtual ~Texture(void) {}
 
-		void Run(void) const;
+		bool loadFromFile(const String &fileName);
 
 	protected:
-		sf::RenderWindow *m_sfmlWindow;
+		sf::Texture *m_sfmlTexture;
+
+		const sf::Texture *getSfmlTexture(void) const;
 	};
 };
 
-#endif // __OASISROOT_H__
+#endif // __OASISTEXTURE_H__

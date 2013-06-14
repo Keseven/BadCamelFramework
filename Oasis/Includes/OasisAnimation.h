@@ -15,25 +15,22 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISROOT_H__
-#define __OASISROOT_H__
+#ifndef __OASISANIMATION_H__
+#define __OASISANIMATION_H__
 
 #include <OasisCommon.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS Root
+	class OASIS_CLASS Animation
 	{
 	public:		
-		Root(const IntVector2 &dimensions, const String &title);
+		Animation(void) {}
 
-		virtual ~Root(void) {}
+		virtual ~Animation(void) {}
 
-		void Run(void) const;
-
-	protected:
-		sf::RenderWindow *m_sfmlWindow;
+		virtual void update(const sf::Clock *timeElapsed) const = 0;
 	};
 };
 
-#endif // __OASISROOT_H__
+#endif // __OASISANIMATION_H__

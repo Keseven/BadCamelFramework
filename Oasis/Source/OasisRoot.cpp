@@ -16,32 +16,29 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <OasisRoot.h>
-#include <OasisWindow.h>
+
+#include <SFML/Graphics.hpp>
 
 namespace Oasis
-{
-	Root::Root(UInt16 width, UInt16 height)
+{	
+	Root::Root(const IntVector2 &dimensions, const String &title)
 	{
-		initialise(Vector2u(width, height));
+		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title);
 	}
-
-	Root::Root(const Vector2u &dimensions)
+	
+	void Root::Run(void) const
 	{
-		initialise(dimensions);
-	}
+		while (m_sfmlWindow->isOpen())
+		{
+			sf::Event event;
+			while (m_sfmlWindow->pollEvent(event))
+			{
+				if (event.type == sf::Event::Closed)
+					m_sfmlWindow->close();
+			}
 
-	const Window *Root::getWindow(void) const
-	{
-		return m_window;
-	}
-
-	void Root::initialise(const Vector2u &dimensions)
-	{
-		createWindow(dimensions);
-	}
-
-	void Root::createWindow(const Vector2u &dimensions)
-	{
-		m_window = new Window(dimensions, "");
+			m_sfmlWindow->clear();
+			m_sfmlWindow->display();
+		}
 	}
 };

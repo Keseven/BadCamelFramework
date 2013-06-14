@@ -25,7 +25,7 @@ namespace Oasis
 	template <typename T>
 	class Vector2
 	{
-	public :		
+	public:		
 		T x;
 		T y;
 
@@ -35,14 +35,12 @@ namespace Oasis
 		template <typename U>
 		inline explicit Vector2(const Vector2<U>& vector) : x(static_cast<T>(vector.x)), y(static_cast<T>(vector.y)) {}
 
-		virtual inline ~Vector2(void) {}	
-
-		operator sf::Vector2<T>(void) const;
+		virtual inline ~Vector2(void) {}
 	};
 	
-	typedef Vector2<int>				Vector2i;
-	typedef Vector2<unsigned int>		Vector2u;
-	typedef Vector2<float>				Vector2f;
+	typedef Vector2<int>				IntVector2;
+	typedef Vector2<unsigned int>		UIntVector2;
+	typedef Vector2<float>				FloatVector2;
 		
 	template <typename T>
 	inline Vector2<T> operator -(const Vector2<T> &right)
