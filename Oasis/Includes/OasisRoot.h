@@ -30,7 +30,7 @@ namespace Oasis
 
 		virtual ~Root(void) {}
 
-		void Run(void) const;
+		void Run(const Sprite &s) const;
 
 	protected:
 		sf::RenderWindow *m_sfmlWindow;

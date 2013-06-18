@@ -43,4 +43,9 @@ namespace Oasis
 		setTexture(texture);
 		m_sfmlSprite->setTextureRect(Convert::toSfmlRectangle(rectangle));
 	}
+
+	const sf::Sprite &Sprite::getSfmlSprite(void) const
+	{
+		return *m_sfmlSprite;
+	}
 };

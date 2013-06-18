@@ -49,6 +49,7 @@ namespace Oasis
 	typedef std::string String;
 	
 	class Animation;
+	class Sprite;
 	class Texture;	
 };
 

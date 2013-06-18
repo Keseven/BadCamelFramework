@@ -25,6 +25,8 @@ namespace Oasis
 {
 	class OASIS_CLASS Sprite
 	{
+		friend class Root;
+
 	public:		
 		Sprite(void);
 
@@ -35,6 +37,8 @@ namespace Oasis
 		
 	protected:
 		sf::Sprite *m_sfmlSprite;		
+
+		const sf::Sprite &getSfmlSprite(void) const;
 	};
 };
 

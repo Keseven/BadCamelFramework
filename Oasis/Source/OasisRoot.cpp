@@ -16,6 +16,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <OasisRoot.h>
+#include <OasisSprite.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -26,7 +27,7 @@ namespace Oasis
 		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title);
 	}
 	
-	void Root::Run(void) const
+	void Root::Run(const Sprite &s) const
 	{
 		while (m_sfmlWindow->isOpen())
 		{
@@ -38,6 +39,7 @@ namespace Oasis
 			}
 
 			m_sfmlWindow->clear();
+			m_sfmlWindow->draw(s.getSfmlSprite());
 			m_sfmlWindow->display();
 		}
 	}

@@ -9,9 +9,9 @@
 	Oasis::Texture t;
 	t.loadFromFile("..\\..\\..\\..\\..\\Demonstration\\Media\\HelloWorld.png");
 	Oasis::Sprite s;
-	s.setTexture(t);
+	s.setTexture(t, Oasis::IntRectangle(0, 0, 20, 20));
 
-	root.Run();
+	root.Run(s);
 
 	return 0;
 };
