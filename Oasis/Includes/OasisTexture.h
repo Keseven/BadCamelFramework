@@ -27,8 +27,7 @@ namespace Oasis
 		friend class Sprite;
 
 	public:
-		Texture(void);
-		
+		Texture(void);		
 		virtual ~Texture(void);
 
 		bool loadFromFile(const String &fileName);

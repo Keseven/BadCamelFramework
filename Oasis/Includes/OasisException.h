@@ -23,7 +23,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 namespace Oasis
 {
 	class OASIS_CLASS Exception
-    {   
+    {
     public:      
         enum ExceptionType
 		{

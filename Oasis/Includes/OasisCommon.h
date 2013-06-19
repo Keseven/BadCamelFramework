@@ -20,8 +20,10 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <OasisConfigure.h>
 
+#include <deque>
 #include <string>
-#include <vector>
+
+#define OASIS_DELETE(variable)						if (variable) {delete variable; variable = NULL;}
 
 namespace Oasis
 {
@@ -50,6 +52,7 @@ namespace Oasis
 	
 	class Animation;
 	class Sprite;
+	class SpriteManager;
 	class Texture;	
 };
 

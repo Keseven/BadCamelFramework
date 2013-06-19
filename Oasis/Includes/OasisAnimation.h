@@ -26,10 +26,9 @@ namespace Oasis
 	{
 	public:		
 		Animation(void) {}
-
 		virtual ~Animation(void) {}
 
-		virtual void update(const sf::Clock *timeElapsed) const = 0;
+		virtual void update(const sf::Clock &timeElapsed) const = 0;
 	};
 };
 

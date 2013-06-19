@@ -48,6 +48,12 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSpriteManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp">

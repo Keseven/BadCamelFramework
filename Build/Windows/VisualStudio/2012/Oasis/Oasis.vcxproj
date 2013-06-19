@@ -25,9 +25,11 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisException.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManager.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSprite.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSpriteManager.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisTexture.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h" />
   </ItemGroup>

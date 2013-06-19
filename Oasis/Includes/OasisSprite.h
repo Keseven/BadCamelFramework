@@ -29,7 +29,6 @@ namespace Oasis
 
 	public:		
 		Sprite(void);
-
 		virtual ~Sprite(void);
 
 		void setTexture(const Texture &texture) const;

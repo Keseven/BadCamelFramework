@@ -30,7 +30,7 @@ namespace Oasis
 
 	Sprite::~Sprite(void)
 	{
-		delete m_sfmlSprite;
+		OASIS_DELETE(m_sfmlSprite);
 	}
 
 	void Sprite::setTexture(const Texture &texture) const

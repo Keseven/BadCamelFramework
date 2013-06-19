@@ -26,7 +26,12 @@ namespace Oasis
 	{
 		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title);
 	}
-	
+
+	Root::~Root(void)
+	{
+		OASIS_DELETE(m_sfmlWindow);
+	}
+		
 	void Root::Run(const Sprite &s) const
 	{
 		while (m_sfmlWindow->isOpen())
@@ -42,5 +47,10 @@ namespace Oasis
 			m_sfmlWindow->draw(s.getSfmlSprite());
 			m_sfmlWindow->display();
 		}
+	}
+
+	const SpriteManager &Root::getSpriteManager(void) const
+	{
+		return m_spriteManager;
 	}
 };

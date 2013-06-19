@@ -29,7 +29,7 @@ namespace Oasis
 
 	Texture::~Texture(void)
 	{
-		delete m_sfmlTexture;
+		OASIS_DELETE(m_sfmlTexture);
 	}
 
 	bool Texture::loadFromFile(const String &fileName)
