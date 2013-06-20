@@ -20,14 +20,15 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <OasisCommon.h>
 #include <OasisManager.h>
+#include <OasisSprite.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS SpriteManager : Manager
+	class OASIS_CLASS SpriteManager : Manager<Sprite>
     {
 	public:
 		SpriteManager(void) {}
-		virtual ~SpriteManager(void) {}			
+		virtual ~SpriteManager(void) {}
 	}; 
 };
 

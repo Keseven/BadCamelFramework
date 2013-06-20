@@ -22,14 +22,17 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Oasis
 {
+	template <class T>
 	class Manager
     {
-	protected:
-		Manager(void) {}
+	public:
 		virtual ~Manager(void) {}
 
+	
 	protected:
-		std::deque<Managed> m_managedArray;
+		std::deque<T> m_managedArray;
+
+		Manager(void) {}		
 	};
 };
 
