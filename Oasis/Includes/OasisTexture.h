@@ -35,7 +35,7 @@ namespace Oasis
 	protected:
 		sf::Texture *m_sfmlTexture;
 
-		const sf::Texture &getSfmlTexture(void) const;
+		sf::Texture *getSfmlTexture(void) const;
 	};
 };
 

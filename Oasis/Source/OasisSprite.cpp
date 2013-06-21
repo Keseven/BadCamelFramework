@@ -33,19 +33,19 @@ namespace Oasis
 		OASIS_DELETE(m_sfmlSprite);
 	}
 
-	void Sprite::setTexture(const Texture &texture) const
+	void Sprite::setTexture(Texture *texture) const
 	{		
-		m_sfmlSprite->setTexture(texture.getSfmlTexture());
+		m_sfmlSprite->setTexture(*texture->getSfmlTexture());
 	}
 
-	void Sprite::setTexture(const Texture &texture, const IntRectangle &rectangle) const
+	void Sprite::setTexture(Texture *texture, const IntRectangle &rectangle) const
 	{
 		setTexture(texture);
 		m_sfmlSprite->setTextureRect(Convert::toSfmlRectangle(rectangle));
 	}
 
-	const sf::Sprite &Sprite::getSfmlSprite(void) const
+	sf::Sprite *Sprite::getSfmlSprite(void) const
 	{
-		return *m_sfmlSprite;
+		return m_sfmlSprite;
 	}
 };

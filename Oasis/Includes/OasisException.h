@@ -27,7 +27,9 @@ namespace Oasis
     public:      
         enum ExceptionType
 		{
-			ET_COULD_NOT_OPEN_FILE
+			ET_COULD_NOT_OPEN_FILE,
+			ET_DUPLICATE_ITEM,
+			ET_ITEM_NOT_FOUND
         };
 
 		Exception(ExceptionType type, const String &source, const String &description, const char *fileName, UInt32 lineNumber) : m_type(type), m_source(source), m_descrpition(description), m_fileName(fileName), m_lineNumber(lineNumber) {}

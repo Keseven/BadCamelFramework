@@ -15,32 +15,21 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISWINDOW_H__
-#define __OASISWINDOW_H__
+#ifndef __OASISMANAGED_H__
+#define __OASISMANAGED_H__
 
 #include <OasisCommon.h>
 
 namespace Oasis
-{
-	class OASIS_CLASS Window
-	{
-	public:
-		Window(UInt16 width, UInt16 height, const String &title);
-		Window(const Vector2u &dimensions, const String &title);
-		
-		virtual ~Window(void) {}
-
-		void setSize(UInt16 width, UInt16 height) const;
-		void setSize(const Vector2u &dimensions) const;
-
-		void setTitle(const String &title) const;
-
+{	
+	class Managed
+    {
+	public:		
+		virtual ~Managed(void) {}
+	
 	protected:
-		sf::RenderWindow *m_sfmlWindow;
-
-		void initialise(const Vector2u &dimensions, const String &title);
-		void createSFMLWindow(const Vector2u &dimensions, const String &title);
+		Managed(void) {}		
 	};
 };
 
-#endif // __OASISWINDOW_H__
+#endif // __OASISMANAGED_H__

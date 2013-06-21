@@ -21,9 +21,11 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <OasisConfigure.h>
 
 #include <deque>
+#include <map>
 #include <string>
 
 #define OASIS_DELETE(variable)						if (variable) {delete variable; variable = NULL;}
+#define OASIS_DELETE_CONTAINER(container)			for (UInt16 counter = 0; counter < container.size(); counter++) {OASIS_DELETE(container[counter]);} container.clear();
 
 namespace Oasis
 {
@@ -51,7 +53,7 @@ namespace Oasis
 	typedef std::string String;
 	
 	class Animation;
-	class Sprite;
+	class Managed;
 	class SpriteManager;
 	class Texture;	
 };

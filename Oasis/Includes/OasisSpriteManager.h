@@ -24,7 +24,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Oasis
 {
-	class OASIS_CLASS SpriteManager : Manager<Sprite>
+	class OASIS_CLASS SpriteManager : public Manager<Sprite>
     {
 	public:
 		SpriteManager(void) {}

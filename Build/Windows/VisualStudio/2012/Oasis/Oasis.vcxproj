@@ -20,11 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\Oasis.h" />
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisAnimation.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisCommon.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConfigure.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisConvert.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisException.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManaged.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManager.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />

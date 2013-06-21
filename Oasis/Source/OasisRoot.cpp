@@ -16,7 +16,7 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <OasisRoot.h>
-#include <OasisSprite.h>
+#include <OasisSpriteManager.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -25,6 +25,8 @@ namespace Oasis
 	Root::Root(const IntVector2 &dimensions, const String &title)
 	{
 		m_sfmlWindow = new sf::RenderWindow(sf::VideoMode(dimensions.x, dimensions.y), title);
+
+		m_spriteManager = new SpriteManager;
 	}
 
 	Root::~Root(void)
@@ -32,7 +34,7 @@ namespace Oasis
 		OASIS_DELETE(m_sfmlWindow);
 	}
 		
-	void Root::Run(const Sprite &s) const
+	void Root::Run(void)
 	{
 		while (m_sfmlWindow->isOpen())
 		{
@@ -44,12 +46,20 @@ namespace Oasis
 			}
 
 			m_sfmlWindow->clear();
-			m_sfmlWindow->draw(s.getSfmlSprite());
+
+			Sprite *sprite = m_spriteManager->getFirstItem();
+
+			while (sprite)
+			{
+				m_sfmlWindow->draw(*sprite->getSfmlSprite());
+				sprite = m_spriteManager->getNextItem();
+			}
+
 			m_sfmlWindow->display();
 		}
 	}
 
-	const SpriteManager &Root::getSpriteManager(void) const
+	SpriteManager *Root::getSpriteManager(void) const
 	{
 		return m_spriteManager;
 	}

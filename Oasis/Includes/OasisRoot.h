@@ -19,7 +19,6 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISROOT_H__
 
 #include <OasisCommon.h>
-#include <OasisSpriteManager.h>
 #include <OasisVector2.h>
 
 
@@ -31,14 +30,14 @@ namespace Oasis
 		Root(const IntVector2 &dimensions, const String &title);
 		virtual ~Root(void);
 
-		void Run(const Sprite &s) const;
+		void Run(void);
 
-		const SpriteManager &getSpriteManager(void) const;
+		SpriteManager *getSpriteManager(void) const;
 
 	protected:
 		sf::RenderWindow *m_sfmlWindow;
 		
-		SpriteManager m_spriteManager;
+		SpriteManager *m_spriteManager;
 	};
 };
 

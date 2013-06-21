@@ -42,9 +42,6 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisAnimation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,6 +49,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSpriteManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManaged.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,11 +19,12 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISSPRITE_H__
 
 #include <OasisCommon.h>
+#include <OasisManaged.h>
 #include <OasisRectangle.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS Sprite
+	class OASIS_CLASS Sprite : public Managed
 	{
 		friend class Root;
 
@@ -31,13 +32,13 @@ namespace Oasis
 		Sprite(void);
 		virtual ~Sprite(void);
 
-		void setTexture(const Texture &texture) const;
-		void setTexture(const Texture &texture, const IntRectangle &rectangle) const;
+		void setTexture(Texture *texture) const;
+		void setTexture(Texture *texture, const IntRectangle &rectangle) const;
 		
 	protected:
 		sf::Sprite *m_sfmlSprite;		
 
-		const sf::Sprite &getSfmlSprite(void) const;
+		sf::Sprite *getSfmlSprite(void) const;
 	};
 };
 

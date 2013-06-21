@@ -40,8 +40,8 @@ namespace Oasis
 		return true;
 	}
 
-	const sf::Texture &Texture::getSfmlTexture(void) const
+	sf::Texture *Texture::getSfmlTexture(void) const
 	{
-		return *m_sfmlTexture;
+		return m_sfmlTexture;
 	}
 };
