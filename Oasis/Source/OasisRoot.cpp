@@ -32,6 +32,8 @@ namespace Oasis
 	Root::~Root(void)
 	{
 		OASIS_DELETE(m_sfmlWindow);
+		
+		OASIS_DELETE(m_spriteManager);
 	}
 		
 	void Root::Run(void)

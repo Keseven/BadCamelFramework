@@ -23,9 +23,10 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <deque>
 #include <map>
 #include <string>
+#include <sstream>
 
-#define OASIS_DELETE(variable)						if (variable) {delete variable; variable = NULL;}
-#define OASIS_DELETE_CONTAINER(container)			for (UInt16 counter = 0; counter < container.size(); counter++) {OASIS_DELETE(container[counter]);} container.clear();
+#define OASIS_DELETE(variable)						{if (variable) {delete variable; variable = NULL;}}
+#define OASIS_DELETE_CONTAINER(container)			{for (UInt16 counter = 0; counter < container.size(); counter++) {OASIS_DELETE(container[counter]);} container.clear();}
 
 namespace Oasis
 {

@@ -19,7 +19,9 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISMANAGER_H__
 
 #include <OasisCommon.h>
+#include <OasisConvert.h>
 #include <OasisException.h>
+#include <OasisUID.h>
 
 namespace Oasis
 {
@@ -56,6 +58,11 @@ namespace Oasis
 			checkPoolSize();
 		}
 
+		T *createItem(void)
+		{
+			return createItem(Convert::toString(UID::getNext()));
+		}
+
 		T *createItem(const String &name)
 		{
 			if (m_usedItems.find(name) != m_usedItems.end())
@@ -70,7 +77,7 @@ namespace Oasis
 			m_freeItems.pop_back();
 
 			m_usedItems[name] = item;
-			
+						
 			return static_cast<T*>(item);
 		}
 
@@ -82,6 +89,35 @@ namespace Oasis
 				OASIS_EXCEPTION(Exception::ET_ITEM_NOT_FOUND, "Manager::getItem", "An item with this name could not be found");
 
 			return static_cast<T*>(m_usedItemsIterator->second);
+		}
+
+		void deleteItem(const String &name)
+		{
+			m_usedItemsIterator = m_usedItems.find(name);
+
+			if (m_usedItemsIterator == m_usedItems.end())
+				OASIS_EXCEPTION(Exception::ET_ITEM_NOT_FOUND, "Manager::deleteItem", "An item with this name could not be found");
+
+			m_usedItemsIterator->second->reset();
+
+			m_freeItems.push_back(m_usedItemsIterator->second);
+			m_usedItems.erase(m_usedItemsIterator);
+		}
+
+		void deleteItem(T *item)
+		{
+			for (m_usedItemsIterator = m_usedItems.begin(); m_usedItemsIterator != m_usedItems.end(); m_usedItemsIterator++)
+			{
+				if (m_usedItemsIterator->second == item)
+				{
+					m_usedItemsIterator->second->reset();
+
+					m_freeItems.push_back(m_usedItemsIterator->second);
+					m_usedItems.erase(m_usedItemsIterator);
+
+					break;
+				}
+			}
 		}
 
 		UInt16 getItemCount(void) const
@@ -146,6 +182,7 @@ namespace Oasis
 			while (m_pool.size() < finalSize)
 			{						
 				item = new T;
+				item->reset();
 
 				m_pool.push_back(item);
 				m_freeItems.push_back(item);

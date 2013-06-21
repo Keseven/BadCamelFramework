@@ -29,15 +29,36 @@ namespace Oasis
 	{
 	public: 
 		template <typename T>
+		static inline String toString(T value)
+		{
+			std::ostringstream oss;
+			oss << value;
+    
+			return oss.str();
+		}
+
+		template <typename T>
 		static inline sf::Vector2<T> toSfmlVector2(const Vector2<T> &vector2)
 		{
 			return sf::Vector2<T>(vector2.x, vector2.y);
-		} 
+		}
+
+		template <typename T>
+		static inline Vector2<T> fromSfmlVector2(const sf::Vector2<T> &vector2)
+		{
+			return Vector2<T>(vector2.x, vector2.y);
+		}
 
 		template <typename T>
 		static inline sf::Rect<T> toSfmlRectangle(const Rectangle<T> &rectangle)
 		{
 			return sf::Rect<T>(rectangle.left, rectangle.top, rectangle.width, rectangle.height);
+		}
+
+		template <typename T>
+		static inline Rectangle<T> fromSfmlRectangle(const sf::Rect<T> &rectangle)
+		{
+			return Rectangle<T>(rectangle.left, rectangle.top, rectangle.width, rectangle.height);
 		}
 	};
 };

@@ -54,6 +54,9 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisManaged.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisUID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisUID.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

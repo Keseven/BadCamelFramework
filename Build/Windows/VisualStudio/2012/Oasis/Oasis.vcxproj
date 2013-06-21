@@ -31,6 +31,7 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSprite.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSpriteManager.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisTexture.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisUID.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +39,7 @@
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisRoot.cpp" />
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisSprite.cpp" />
     <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisTexture.cpp" />
+    <ClCompile Include="..\..\..\..\..\Oasis\Source\OasisUID.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{82BECA2E-3AA7-4CF4-B740-F379AC9E1FD8}</ProjectGuid>

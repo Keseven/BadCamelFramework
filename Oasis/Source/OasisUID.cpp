@@ -15,23 +15,23 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISMANAGED_H__
-#define __OASISMANAGED_H__
-
-#include <OasisCommon.h>
+#include <OasisUID.h>
 
 namespace Oasis
 {	
-	class Managed
-    {
-	public:		
-		virtual ~Managed(void) {}
+	std::map<String, UInt16> UID::m_uids;
 
-		virtual void reset(void) = 0;
-	
-	protected:
-		Managed(void) {}		
-	};
+	UInt16 UID::getNext(void)
+	{
+		return getNext("__OASIS_UID__");
+	}
+
+	UInt16 UID::getNext(const String &name)
+	{
+		if (m_uids.find(name) == m_uids.end())
+			m_uids[name] = 0;
+
+		return ++m_uids[name];
+
+	}
 };
-
-#endif // __OASISMANAGED_H__

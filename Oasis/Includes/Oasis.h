@@ -25,4 +25,4 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #include <OasisSpriteManager.h>
 #include <OasisTexture.h>
 
-#endif __OASIS_H__ */
+#endif // __OASIS_H__
