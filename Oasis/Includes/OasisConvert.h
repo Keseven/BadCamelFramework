@@ -19,7 +19,6 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISCONVERT_H__
 
 #include <OasisCommon.h>
-#include <OasisRectangle.h>
 
 #include <SFML/Graphics.hpp>
 
@@ -27,15 +26,8 @@ namespace Oasis
 {
 	class Convert
 	{
-	public: 
-		template <typename T>
-		static inline String toString(T value)
-		{
-			std::ostringstream oss;
-			oss << value;
-    
-			return oss.str();
-		}
+	public: 	
+		virtual ~Convert(void) {}
 
 		template <typename T>
 		static inline sf::Vector2<T> toSfmlVector2(const Vector2<T> &vector2)
@@ -60,6 +52,9 @@ namespace Oasis
 		{
 			return Rectangle<T>(rectangle.left, rectangle.top, rectangle.width, rectangle.height);
 		}
+
+	protected:
+		Convert(void) {}
 	};
 };
 

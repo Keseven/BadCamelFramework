@@ -49,11 +49,9 @@ namespace Oasis
 		m_sfmlSprite->setTextureRect(Convert::toSfmlRectangle(rectangle));
 	}
 
-	const FloatVector2 &Sprite::getPosition(void)
+	const FloatVector2 Sprite::getPosition(void)
 	{
-		m_position = Convert::fromSfmlVector2(m_sfmlSprite->getPosition());
-
-		return m_position;
+		return Convert::fromSfmlVector2(m_sfmlSprite->getPosition());
 	}
 
 	void Sprite::setPosition(const FloatVector2 &position) const

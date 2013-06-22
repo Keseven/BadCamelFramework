@@ -19,8 +19,6 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISMANAGER_H__
 
 #include <OasisCommon.h>
-#include <OasisConvert.h>
-#include <OasisException.h>
 #include <OasisUID.h>
 
 namespace Oasis
@@ -60,7 +58,7 @@ namespace Oasis
 
 		T *createItem(void)
 		{
-			return createItem(Convert::toString(UID::getNext()));
+			return createItem(StringUtilities::toString(UID::getNext()));
 		}
 
 		T *createItem(const String &name)

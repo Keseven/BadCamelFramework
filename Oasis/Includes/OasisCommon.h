@@ -52,12 +52,17 @@ namespace Oasis
     #endif
 
 	typedef std::string String;
-	
+
 	class Animation;
 	class Managed;
 	class SpriteManager;
 	class Texture;	
 };
+
+#include <OasisException.h>
+#include <OasisVector2.h>
+#include <OasisRectangle.h>
+#include <OasisStringUtilities.h>
 
 namespace sf
 {

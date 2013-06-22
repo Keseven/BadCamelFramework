@@ -15,38 +15,30 @@ You should have received a copy of the GNU General Public License
 along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef __OASISSPRITE_H__
-#define __OASISSPRITE_H__
+#ifndef __OASISSTRINGUTILITIES_H__
+#define __OASISSTRINGUTILITIES_H__
 
 #include <OasisCommon.h>
-#include <OasisManaged.h>
 
 namespace Oasis
 {
-	class OASIS_CLASS Sprite : public Managed
+	class OASIS_CLASS StringUtilities
 	{
-		friend class Root;
+	public:
+		virtual ~StringUtilities(void) {}
 
-	public:		
-		Sprite(void) : m_sfmlSprite(NULL) {}
-		virtual ~Sprite(void);
+		template <typename T>
+		static inline String toString(T value)
+		{
+			std::ostringstream oss;
+			oss << value;
 
-		void reset(void);
-
-		void setTexture(Texture *texture) const;
-		void setTexture(Texture *texture, const IntRectangle &rectangle) const;
-
-		const FloatVector2 getPosition(void);
-		void setPosition(const FloatVector2 &position) const;
-
-		void move(UInt16 x, UInt16 y) const;
-		void move(const FloatVector2 &offset) const;
-		
+			return oss.str();
+		}
+	
 	protected:
-		sf::Sprite *m_sfmlSprite;
-
-		sf::Sprite *getSfmlSprite(void) const;
+		StringUtilities(void) {}
 	};
 };
 
-#endif // __OASISSPRITE_H__
+#endif // __OASISSTRINGUTILITIES_H__

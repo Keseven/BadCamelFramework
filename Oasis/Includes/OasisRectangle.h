@@ -19,7 +19,6 @@ along with Oasis.  If not, see <http://www.gnu.org/licenses/>.
 #define __OASISRECTANGLE_H__
 
 #include <OasisCommon.h>
-#include <OasisVector2.h>
 
 namespace Oasis
 {

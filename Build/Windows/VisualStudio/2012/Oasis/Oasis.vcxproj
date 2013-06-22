@@ -30,6 +30,7 @@
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisRoot.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSprite.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisSpriteManager.h" />
+    <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisStringUtilities.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisTexture.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisUID.h" />
     <ClInclude Include="..\..\..\..\..\Oasis\Includes\OasisVector2.h" />
